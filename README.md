@@ -9,7 +9,7 @@ It connects to a centralized server running on a Raspberry Pi to receive real-ti
 This repository acts as the presentation layer. The complete system consists of three distinct parts:
 
 -   **Frontend (This Repo):** React web application for user interaction.
--   **Backend API:** Node.js/Express server handling business logic, scheduling, and websocket connections (hosted on Raspberry Pi) [].
+-   **Backend API:** Node.js/Express server handling business logic, scheduling, and websocket connections (hosted on Raspberry Pi) [https://github.com/pruden96/home-watering-system-backend].
 -   **IoT Firmware:** C++ code running on ESP32 units for physical valve control and pump [].
 
 ## Features
