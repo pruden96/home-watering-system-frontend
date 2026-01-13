@@ -38,8 +38,8 @@ This repository acts as the presentation layer. The complete system consists of 
 1.  Clone the repository:
 
     ```bash
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone https://github.com/pruden96/home-watering-system-frontend.git
+    cd home-watering-system-frontend
     ```
 
 2.  Install dependencies:
