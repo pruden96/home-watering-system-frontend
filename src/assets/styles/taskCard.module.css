@@ -1,0 +1,106 @@
+.card {
+    background-color: #20243b;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 16px; /* Espacio entre tarjetas */
+    border: 1px solid rgba(116, 169, 206, 0.15);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+    border-color: rgba(116, 169, 206, 0.4);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.timeInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.time {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+}
+
+.duration {
+    color: #74a9ce;
+    font-size: 0.9rem;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.daysRow {
+    display: flex;
+    gap: 6px;
+}
+
+.dayDot {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color: transparent;
+    color: #4b5563; /* Gris muy oscuro/apagado */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dayDot.active {
+    background-color: #74a9ce;
+    color: #20243b;
+    border-color: #74a9ce;
+}
+
+.moreBtn {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trashBtn {
+    background: none;
+    border: none;
+    color: #eb6666;
+    cursor: pointer;
+    padding: 8px 8px 8px 16px;
+    border-radius: 50%;
+    transition: background 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.moreBtn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+}

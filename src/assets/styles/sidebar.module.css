@@ -1,0 +1,75 @@
+/* Sidebar.module.css */
+
+/* El fondo oscuro que cubre el resto de la pantalla (overlay) */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 40; /* Debajo del sidebar, encima del contenido */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s;
+}
+
+.overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* El panel lateral en sí */
+.sidebar {
+    position: fixed;
+    top: 70px; /* AJUSTAR: Altura aproximada de tu Header */
+    left: 0;
+    bottom: 0;
+    width: 250px; /* Ancho del menú */
+    background-color: #20243b;
+    border-right: 1px solid rgba(116, 169, 206, 0.2);
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.5);
+    z-index: 50;
+    transform: translateX(-100%); /* Oculto a la izquierda */
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.sidebar.open {
+    transform: translateX(0); /* Visible */
+}
+
+/* Elementos del menú */
+.menuItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 24px;
+    color: #9ca3af; /* Gris inactivo */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    border-left: 4px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.menuItem:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+/* Estado Activo */
+.menuItem.active {
+    background-color: rgba(116, 169, 206, 0.1);
+    color: #74a9ce; /* Tu color celeste */
+    border-left-color: #74a9ce;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}

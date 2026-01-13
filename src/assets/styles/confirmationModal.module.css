@@ -1,0 +1,93 @@
+/* ConfirmModal.module.css */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050; /* Un poco más alto por seguridad */
+    animation: fadeIn 0.2s ease-out;
+}
+
+.modal {
+    width: 100%;
+    max-width: 380px;
+    background-color: #20243b;
+    border-radius: 16px;
+    border: 1px solid rgba(116, 169, 206, 0.3);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin: 16px;
+    text-align: center;
+}
+
+.title {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.message {
+    color: #9ca3af; /* Gris suave */
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 32px;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.buttonBase {
+    flex: 1;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+}
+
+.cancelBtn {
+    background-color: transparent;
+    border: 1px solid rgba(116, 169, 206, 0.3);
+    color: #74a9ce;
+}
+
+.cancelBtn:hover {
+    background-color: rgba(116, 169, 206, 0.1);
+    border-color: #74a9ce;
+}
+
+.deleteBtn {
+    background-color: #ef4444; /* Rojo estándar para error/borrar */
+    color: white;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.deleteBtn:hover {
+    background-color: #dc2626;
+    transform: translateY(-1px);
+}
+
+.deleteBtn:active {
+    transform: scale(0.96);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,126 @@
+.buttonContainer {
+    width: 80vmin;
+    display: flex;
+    aspect-ratio: 1;
+    border: 2.5px solid #90d5ff;
+    border-radius: 50%;
+    justify-self: center;
+    position: absolute;
+    overflow: hidden;
+    top: 20%;
+}
+
+.wave {
+    width: 1024px;
+    height: 512px;
+    position: absolute;
+}
+
+.waveRigth {
+    z-index: 3;
+    animation: panDiagonal 10s linear forwards;
+}
+
+.waveLeft {
+    z-index: 2;
+    animation: panDiagonalLeft 9.5s linear forwards;
+}
+
+.wave img {
+    width: 100%;
+    /* aspect-ratio: 1; */
+}
+
+.raindrop {
+    width: 80vmin;
+    display: flex;
+    aspect-ratio: 1;
+    justify-self: center;
+    position: relative;
+    z-index: 3;
+    justify-content: center;
+}
+
+.raindrop img {
+    width: 50%;
+    height: auto;
+    position: relative;
+    top: -20%;
+}
+
+.startTextContainer {
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    align-self: center;
+}
+
+.onGoingTextContainer {
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+p {
+    font-size: 42px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.inactive {
+    display: none;
+}
+
+.active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* .text {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 2.5rem;
+    text-align: center;
+    position: relative;
+    top: 45%;
+}
+
+.textEmpty {
+    color: #fdfdfd;
+    z-index: 5;
+} */
+
+/* Definición de la animación "panDiagonal" */
+@keyframes panDiagonal {
+    from {
+        top: 100%;
+        right: 0;
+    }
+
+    to {
+        top: -12%;
+        right: -100vmin;
+    }
+}
+
+@keyframes panDiagonalLeft {
+    /* ESTADO INICIAL */
+    /* "la esquina superior derecha del div interno... a la altura del fondo inferior... y a su tope derecho" */
+    from {
+        top: 100%; /* Su 'top' empieza al 100% (abajo) del padre */
+        left: 0%; /* Su 'right' empieza al 0 (pegado a la derecha) del padre */
+    }
+
+    /* ESTADO FINAL */
+    /* "se desplace... hacia la deracha y hacia arriba, hasta alcanzar el tope superior" */
+    to {
+        top: -12%; /* Su 'top' termina al 0 (arriba) del padre */
+        left: -150vmin; /* Su 'right' se vuelve negativo (se mueve hacia la derecha) */
+    }
+}
